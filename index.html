@@ -34,12 +34,11 @@ layout: compress
                                
     <a target="_blank" class="link" href="{{site.baseurl}}{{post.url}}"> 
        
-	<div class="card" style="background-color: #3498db;">
+	<div class="card" style="background-color: { '#3498db'%}">
     	<div class="card-number">
-        	{{ forloop.rindex }}
+        {{ forloop.rindex }}
     	</div>
 	</div>	
-         {{forloop.rindex}}
            </div>
             <div class="card-title">
                 {{ post.title | truncate: 13 }}
