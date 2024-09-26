@@ -34,9 +34,9 @@ layout: compress
                                
     <a target="_blank" class="link" href="{{site.baseurl}}{{post.url}}"> 
        
-	<div class="card" style="background-color: { '#3498db'%}">
-    	<div class="card-number">
-        {{ forloop.rindex }}
+	<div class="card" style="background-color: {% cycle '#e74c3c' %}" >
+           <div class="card-number">
+               {{forloop.rindex}}
     	</div>
 	</div>	
            </div>
