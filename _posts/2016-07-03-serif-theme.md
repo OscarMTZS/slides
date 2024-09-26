@@ -1,69 +1,88 @@
+---
 title: "Unidad 2: Actuadores"
 layout: post
 permalink: /unidad-2-actuadores/
 background: '#0a5'
 
 slides:
+  - title: "Unidad 2: Actuadores"
+    slide-data: |
+      Los actuadores son dispositivos que transforman energía en movimiento. Existen tres categorías principales:
+      - Eléctricos: dependen de la electricidad para operar.
+      - Mecánicos: funcionan a partir de piezas mecánicas.
+      - Hidráulicos: utilizan fluidos presurizados.
 
-title: "Unidad 2: Actuadores" slide-data: | Los actuadores transforman distintas formas de energía en movimiento mecánico. Generalmente se dividen en tres grandes grupos:
+  - title: "2.1 Actuadores Eléctricos"
+    slide-data: "Estos actuadores emplean energía eléctrica para producir movimiento preciso y controlado."
 
-Actuadores Eléctricos
-Actuadores Mecánicos
-Actuadores Hidráulicos
-title: "2.1 Eléctricos" slide-data: "Estos actuadores emplean corriente eléctrica para generar desplazamientos o movimientos en diferentes sistemas."
+  - title: "2.1.1 Tipos de Actuadores Eléctricos"
+    slide-data: |
+      - Motores de corriente directa (DC)
+      - Motores paso a paso
+      - Servomotores, que permiten un control preciso de posición y velocidad.
 
-title: "2.1.1 Tipos" slide-data: |
+  - title: "2.1.2 Principio de Funcionamiento"
+    slide-data: "Los actuadores eléctricos convierten la electricidad en energía mecánica, generando movimiento rotacional o lineal."
 
-Motores de corriente continua (DC)
-Motores de pasos
-Servomotores
-title: "2.1.2 Funcionamiento" slide-data: "Transforman la energía eléctrica en movimiento mecánico a través de mecanismos internos."
+  - title: "2.1.3 Características de los Actuadores Eléctricos"
+    slide-data: |
+      - Alta precisión en el control del movimiento.
+      - Capacidad para controlar tanto la velocidad como la posición de manera eficiente.
 
-title: "2.1.3 Características" slide-data: |
+  - title: "2.1.4 Modos de Control"
+    slide-data: |
+      Los actuadores eléctricos pueden ser controlados mediante:
+      - PWM (Modulación por Ancho de Pulso)
+      - Comunicación serial para controles más complejos.
 
-Gran precisión
-Posibilidad de controlar tanto la velocidad como la posición
-title: "2.1.4 Modo de comunicación" slide-data: |
+  - title: "2.2 Actuadores Mecánicos"
+    slide-data: "Generan movimiento mediante la interacción directa entre componentes mecánicos."
 
-Modulación de ancho de pulso (PWM)
-Comunicación mediante puertos seriales
-title: "2.2 Mecánicos" slide-data: "Los actuadores mecánicos generan movimiento a través de la interacción directa entre piezas o mecanismos físicos."
+  - title: "2.2.1 Tipos de Actuadores Mecánicos"
+    slide-data: |
+      - Engranajes
+      - Poleas
+      - Resortes, que almacenan energía para liberarla en forma de movimiento.
 
-title: "2.2.1 Tipos" slide-data: |
+  - title: "2.2.2 Principio de Funcionamiento"
+    slide-data: "Se basan en la interacción mecánica entre componentes para generar movimiento."
 
-Sistemas de engranajes
-Mecanismos de resortes
-Poleas y correas
-title: "2.2.2 Funcionamiento" slide-data: "El movimiento ocurre por la acción de componentes mecánicos que interactúan entre sí."
+  - title: "2.2.3 Características de los Actuadores Mecánicos"
+    slide-data: |
+      - Generalmente económicos y duraderos.
+      - Fiables para aplicaciones donde no se requiere alta precisión.
 
-title: "2.2.3 Características" slide-data: |
+  - title: "2.2.4 Modos de Control"
+    slide-data: "Funcionan de manera manual o automática, usando sistemas eléctricos simples."
 
-Bajo costo en comparación con otros tipos
-Fiabilidad en operaciones simples
-title: "2.2.4 Modo de comunicación" slide-data: "Pueden ser activados manualmente o a través de dispositivos eléctricos sencillos."
+  - title: "2.3 Actuadores Hidráulicos"
+    slide-data: "Estos actuadores utilizan fluidos presurizados para generar movimiento lineal o rotatorio."
 
-title: "2.3 Hidráulicos" slide-data: "Utilizan fluidos presurizados para crear movimientos o aplicar fuerza."
+  - title: "2.3.1 Tipos de Actuadores Hidráulicos"
+    slide-data: |
+      - Cilindros hidráulicos: generan movimiento lineal.
+      - Motores hidráulicos: producen movimiento rotacional.
 
-title: "2.3.1 Tipos" slide-data: |
+  - title: "2.3.2 Principio de Funcionamiento"
+    slide-data: "El fluido presurizado empuja un pistón dentro de un cilindro, lo que genera movimiento."
 
-Pistones hidráulicos
-Motores de fluido
-title: "2.3.2 Funcionamiento" slide-data: "El fluido presurizado genera movimiento, normalmente impulsando un émbolo o creando rotación."
+  - title: "2.3.3 Características de los Actuadores Hidráulicos"
+    slide-data: |
+      - Capaces de generar grandes fuerzas.
+      - Menor precisión en comparación con actuadores eléctricos.
 
-title: "2.3.3 Características" slide-data: |
+  - title: "2.3.4 Modos de Control"
+    slide-data: "Controlados mediante válvulas que regulan el flujo y la presión del fluido."
 
-Capaces de generar grandes fuerzas
-No tan precisos como otros actuadores
-title: "2.3.4 Modo de comunicación" slide-data: |
-
-Control mediante válvulas y reguladores de flujo
-title: "Fin de la Presentación" slide-data: "¡Gracias por su atención!"
-
+  - title: "Fin de la Presentación"
+    slide-data: "¡Gracias por su atención! Cualquier pregunta será atendida."
+---
 {% for slide in page.slides %}                 
 <section data-background="{% if slide.image %}{{slide.image}}{% elsif slide.background %}{{slide.background}}{% else %}{{page.background}}{% endif %}">
   <h1>{{slide.title}}</h1>
   <p>{{ slide.slide-data | markdownify }}</p>
 </section>               
 {% endfor %}
+
 
 
