@@ -58,3 +58,12 @@ title: "2.3.4 Modo de comunicación" slide-data: |
 
 Control mediante válvulas y reguladores de flujo
 title: "Fin de la Presentación" slide-data: "¡Gracias por su atención!"
+
+{% for slide in page.slides %}                 
+<section data-background="{% if slide.image %}{{slide.image}}{% elsif slide.background %}{{slide.background}}{% else %}{{page.background}}{% endif %}">
+  <h1>{{slide.title}}</h1>
+  <p>{{ slide.slide-data | markdownify }}</p>
+</section>               
+{% endfor %}
+
+
